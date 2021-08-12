@@ -20,10 +20,11 @@ main: './src/app.js'
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
                     publicPath: './dist/',
-                    name: '[name].[ext]?[hash]',
+                    name: '[name].[ext]?[hash]', 
+                    limit: 20000, //20kb
                 },
             },
         ],
